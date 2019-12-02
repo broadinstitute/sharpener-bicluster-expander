@@ -8,19 +8,15 @@ from swagger_server.models.attribute import Attribute
 
 from ncats.translator.modules.gene.gene.gene_to_gene_bicluster_RNAseqDB import GeneToGeneBiclusters
 
-import requests
+import json
 
 def expander_info():
     """
         Return information for this expander
     """
-    return TransformerInfo(
-        name='Gene To Gene Bicluster',
-        function='expander',
-        description='Gene To Gene Bicluster',
-        parameters=[],
-        required_attributes = []
-    )
+    with open("transformer_info.json",'r') as f:
+        info = TransformerInfo.from_dict(json.loads(f.read()))
+        return info
 
 
 def expand(query: TransformerQuery):
