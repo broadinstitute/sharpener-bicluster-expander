@@ -6,8 +6,9 @@ from swagger_server.models.gene_info import GeneInfo
 from swagger_server.models.gene_info_identifiers import GeneInfoIdentifiers
 from swagger_server.models.attribute import Attribute
 
+from ncats.translator.modules.gene.gene.gene_to_gene_bicluster_RNAseqDB import GeneToGeneBiclusters
+
 import requests
-from translator_modules.gene.gene.gene_to_gene_bicluster import GeneToGeneBiclusters
 
 def expander_info():
     """
