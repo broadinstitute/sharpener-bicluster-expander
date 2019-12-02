@@ -3,8 +3,8 @@
 import sys
 from setuptools import setup, find_packages
 
-NAME = "gene-gene-bicluster-expander"
-VERSION = "1.2.0"
+NAME = "swagger_server"
+VERSION = "1.0.0"
 
 # To install the library, run the following
 #
@@ -18,10 +18,10 @@ REQUIRES = ["connexion"]
 setup(
     name=NAME,
     version=VERSION,
-    description="API for an expander based on gene gene bicluster",
+    description="RNAseqDB bi-cluster gene-to-gene links",
     author_email="",
     url="",
-    keywords=["Swagger", "API for an expander based on gene gene bicluster"],
+    keywords=["Swagger", "RNAseqDB bi-cluster gene-to-gene links"],
     install_requires=REQUIRES,
     packages=find_packages(),
     package_data={'': ['swagger/swagger.yaml']},
@@ -29,7 +29,7 @@ setup(
     entry_points={
         'console_scripts': ['swagger_server=swagger_server.__main__:main']},
     long_description="""\
-    Gene-list expander based on gene gene bicluster.
+    Gene-list expander based on bi-clustering RNAseqDB data (https://github.com/mskcc/RNAseqDB).
     """
 )
 
